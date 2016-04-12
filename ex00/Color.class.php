@@ -43,9 +43,19 @@ instance.
 
 
 function __construct( array $kwargs ) {
-	//if ( array_key_exists( 'rgb', $kwargs)
+	if ( array_key_exists( 'rgb', $kwargs))
+	$this->green = 255;
+	else
+	{
 
-	//else if
+	if ( array_key_exists( 'red', $kwargs))
+	$this->red = $kwargs['red'];
+	if ( array_key_exists( 'green', $kwargs))
+	$this->green = $kwargs['green'];
+	if ( array_key_exists( 'blue', $kwargs))
+	$this->blue = $kwargs['blue'];
+
+}
 
 		if (self::$verbose)
 		{
